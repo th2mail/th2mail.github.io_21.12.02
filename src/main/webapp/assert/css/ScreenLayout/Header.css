@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/**
+ * 파일명 : Header.css
+ * 설 명 : 헤더
+ * 최초 생성일 : 
+ *
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-background);
+  color: #1ba5a5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+header .title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .title-wrapper:hover,
+.title-wrapper:hover > input {
+  color: #1ba5a5;
+}
+
+.title-wrapper label span {
+  font-size: 2.5rem;
+  padding-right: 1rem;
+  font-weight: 400;
+}
+
+.title-wrapper > input {
+  width: 360px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #1ba5a5;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+header .search-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+  position: absolute;
+  left: 50%;
+}
+
+header .search-wrapper span {
+  padding: 0rem 1rem;
+  font-size: 1.5rem;
+}
+
+header .search-wrapper input {
+  padding: .5rem;
+  border: none;
+  /* outline을 none으로 설정하지 않으면, text 입력시 테두리가 나타난다. */
+  outline: none;
+  background: #222429;
+  color: #ccc;
+}
+
+header {
+  z-index: 1000;
+}
+
+header .user-wrapper {
+  font-size: 2.2rem;
+  color: var(--color-grey);
+}
+
+header .user-wrapper > div {
+  margin-left: .5rem;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+header .user-wrapper > div:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  color: #1ba5a5;
+}
+
+header .user-wrapper .find-wrapper {
+  position: absolute;
+  top: -100%;
+  right: 4rem;
+  width: 20rem;
+  height: 50px;
+  background: var(--color-white);
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+}
+
+header .user-wrapper .find-wrapper.active {
+  top: 103%;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+header .user-wrapper .find-wrapper input {
+  height: 100%;
+  width: 100%;
+  padding: 0 0 0 1.5rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+header .user-wrapper .find-wrapper label {
+  font-size: 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  color: var(--color-black);
+}
+
+header .user-wrapper .find-wrapper label:hover {
+  color: #1ba5a5;
+  font-weight: bolder;
+}
+
+header .user-wrapper .login-wrapper {
+  position: absolute;
+  top: 115%;
+  right: -105%;
+  background: var(--color-black);
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  width: 25rem;
+  padding: 2rem;
+}
+
+header .user-wrapper .login-wrapper.active {
+  right: 2rem;
+  -webkit-transition: 350ms linear;
+  transition: 350ms linear;
+}
+
+header .user-wrapper .login-wrapper h3 {
+  color: #1ba5a5;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header .user-wrapper .login-wrapper .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+header .user-wrapper .login-wrapper .box label {
+  font-size: 1.5rem;
+}
+
+header .user-wrapper .login-wrapper .box input {
+  width: 270px;
+  height: 35px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  padding: 0 1rem;
+}
+
+header .user-wrapper .login-wrapper .box:nth-child(4) {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+header .user-wrapper .login-wrapper .box:nth-child(4) input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  background: var(--color-dark-grey);
+  color: white;
+}
+
+header .user-wrapper .login-wrapper .box:nth-child(4) input:hover {
+  background: #1ba5a5;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=Header.css.map */

@@ -1,0 +1,1240 @@
+/**
+ * 파일명 : dashboard-7.css
+ * 설 명 : 대쉬보드 7번 화면
+ * 최초 생성일 : 
+ *     
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+#dashboard-7 {
+  background: var(--color-white);
+  color: var(--color-black);
+  margin: 0;  
+  padding: 100px 50px 50px 80px;
+  outline: none;    
+}
+
+#dashboard-7 table {
+  width: 100%;
+  border-spacing: 0px;    
+  text-align: center;
+}
+
+#dashboard-7 .cards .card {   
+  position: relative;        
+}
+
+/* 아이템의 기본 크기 */
+#dashboard-7 .cards .card .item {
+  width: 200px;
+  height: 140px;
+}
+
+/* ******************************************************************************************** 
+
+      .cards.first
+
+******************************************************************************************** */
+
+/* -------------------------------------------------
+  데이터 준비
+------------------------------------------------- */
+
+/* title, 공통 */
+#dashboard-7 .cards.first .card .item .title {
+  position: absolute;
+  width: 160px;  
+  height: 90px;
+  left: 11px;
+  border-left: 2px solid black;  
+  padding-left: 4px;
+  text-align: left;
+  font-size: .9rem;
+  font-weight: 900;
+  transition: all var(--animation-duration) ease;
+}
+/* title, 홀수 */
+#dashboard-7 .cards.first .card:nth-child(even) .item .title {  
+  top: -85px;
+}
+/* title, 짝수 */
+#dashboard-7 .cards.first .card:nth-child(odd) .item .title {
+  top: 5px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* circle, 공통 */
+#dashboard-7 .cards.first .card .item .circle {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: 50%;  
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -15px;
+  transition: all var(--animation-duration) ease;
+  z-index: 1;
+}
+
+/* circle, 큰동그라미 */
+#dashboard-7 .cards.first .card.one .item .circle {
+  border: 8px solid var(--color-wine);
+  width: 150px;
+  height: 150px;
+  top: -80px;
+  left: -10px;  
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;  
+  align-items: center;
+  justify-content: center; 
+  transition: all var(--animation-duration) ease;
+}
+
+/* circle, 큰동그라미, hover */
+#dashboard-7 .cards.first > .card.one > .item > .circle:hover {
+  transform: scale(1.2) rotate(-45deg);
+  background: var(--color-wine);
+  color: var(--color-white);
+}
+
+/* content, 데이터 탐험  */
+#dashboard-7 .cards.first .card.four .item .content {
+  font-size: var(--font-small);
+  position: absolute;
+  width: 130px;
+  height: 70px;
+  top: -70px;
+  left: 41px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: all var(--animation-duration) ease;
+}
+
+/* 
+ * 설명 : 데이터 준비의 하위 메뉴(1. 센서 데이터 현황 ~ 6. 데이터 전처리)에 
+ *        작은 동그라미에 마우스를 올려놨을 때의 이벤트 처리
+ * start
+ */
+#dashboard-7 .cards.first .card .item .circle:hover {
+  transform: scale(1.5);
+  background-color: var(--color-wine) !important;
+  border: 2px dashed var(--color-wine);
+}
+#dashboard-7 .cards.first .card:nth-child(even) .item .circle:hover+.title {
+  width: 210px;
+  height: 50px;
+  top: -50px;
+  left: 10px;
+  border-left: .5rem solid var(--color-wine);
+  padding-left: 20px;
+  font-size: var(--font-regular);
+  color: var(--color-wine);
+}
+#dashboard-7 .cards.first .card:nth-child(even) .item .circle:hover~.content,
+#dashboard-7 .cards.first .card:nth-child(even) .item .circle:hover~.content > a {
+  top: 20px;
+  left: 71px;
+  color: var(--color-wine);
+  font-weight: var(--weight-regular);
+  gap: 20px;
+}
+#dashboard-7 .cards.first .card:nth-child(odd) .item .circle:hover+.title {
+  width: 250px;
+  height: 50px;
+  top: 5px;
+  left: 10px;
+  border-left: .5rem solid var(--color-wine);
+  padding-left: 20px;
+  font-size: var(--font-regular);
+  color: var(--color-wine);
+}
+/* end */
+
+/* ******************************************************************************************** 
+
+      .cards.second
+
+******************************************************************************************** */
+
+/* -------------------------------------------------
+  시계열 준비
+------------------------------------------------- */
+
+/* circle, 공통 */
+#dashboard-7 .cards.second .card .item .circle {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: 50%;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  transition: all var(--animation-duration) ease;
+}
+
+/* circle, 큰동그라미 */
+#dashboard-7 .cards.second .card.one .item .circle {
+  border: 8px solid var(--color-purple);
+  width: 150px;
+  height: 150px;
+  top: 60px;
+  left: -80px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all var(--animation-duration) ease; 
+  z-index: 1;
+}
+
+/* circle, 큰동그라미, hover */
+#dashboard-7 .cards.second .card.one .item .circle:hover {
+  transform: scale(1.2) rotate(45deg);
+  background: var(--color-purple);
+  color: var(--color-white);
+}
+
+/* -------------------------------------------------
+  시계열 데이터 분해
+------------------------------------------------- */
+
+/* circle */
+#dashboard-7 .cards.second .card.two .item .circle {
+  top: 130px;
+  left: -40px;
+  transition: all var(--animation-duration) ease;
+  z-index: 2;
+}
+
+#dashboard-7 .cards.second .card.two .item .circle:hover {
+  transform: scale(1.5);
+  background-color: var(--color-purple) !important;
+  border: 2px dashed var(--color-purple);
+}
+
+/* title */
+#dashboard-7 .cards.second .card.two .item .title {
+  position: absolute;
+  width: 160px;
+  height: 90px;
+  top: 43px;
+  left: -28px;
+  border-left: 2px solid black;
+  padding-left: 4px;
+  text-align: left;
+  font-size: .9rem;
+  font-weight: 900;
+  transition: all var(--animation-duration) ease;
+}
+
+#dashboard-7 .cards.second .card.two .item .circle:hover+.title {
+  width: 230px;
+  height: 50px;
+  top: 90px;
+  left: -32px;
+  border-left: .5rem solid var(--color-purple);
+  padding-left: 20px;
+  background-color: var(--color-white);
+  font-size: var(--font-regular);
+  color: var(--color-purple);
+  z-index: 1;
+}
+
+/* content */
+#dashboard-7 .cards.second .card.two .item .content {
+  position: absolute;
+  font-size: var(--font-small);
+  width: 130px;
+  height: 70px;
+  top: 70px;
+  left: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  align-content: center;
+  text-align: left;
+  transition: all var(--animation-duration) ease;
+} 
+
+#dashboard-7 .cards.second .card.two .item .circle:hover~.content,
+#dashboard-7 .cards.second .card.two .item .circle:hover~.content>a {
+  top: 200px;
+  left: 31px;
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-purple);
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  z-index: 1;
+}
+
+/* -------------------------------------------------
+  시계열 정상성 검사 및 변환
+------------------------------------------------- */
+
+/* circle */
+#dashboard-7 .cards.second .card.three .item .circle {
+  top: 130px;
+  left: -91px;
+  background-color:rgb(255, 255, 255);
+  transition: all var(--animation-duration) ease;
+  z-index: 2 !important;
+}
+
+/* title */
+#dashboard-7 .cards.second > .card.three > .item > .title {
+  position: absolute;
+  width: 200px;
+  height: 90px;
+  top: 49px;
+  left: -80px;
+  border-left: 2px solid black;
+  padding-left: 4px;
+  text-align: left;
+  font-size: .9rem;
+  font-weight: 900;
+  transition: all var(--animation-duration) ease;
+}
+
+/* 여기서부터... */
+#dashboard-7 .cards.second .card.three .item .circle:hover+.title {
+  width: 300px;
+  height: 50px;
+  top: 90px;
+  left: -82px;
+  border-left: .5rem solid var(--color-purple);
+  padding-left: 20px;
+  background-color: var(--color-white);
+  font-size: var(--font-regular);
+  color: var(--color-purple);
+  z-index: 2;
+}
+
+/* content(1), title */
+#dashboard-7 .cards.second > .card.three > .item > .content.one > .title {
+  position: absolute;
+  top: 160px;
+  left: -215px;
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+}
+
+/* content(1), desc */
+#dashboard-7 .cards.second .card.three .item .content.one .desc {
+  font-size: var(--font-small);
+  position: absolute; 
+  width: 225px;
+  height: 70px;
+  top: 185px;
+  left: -311px;
+  text-align: right;
+  padding: 10px;
+}
+
+/* content(2), title */
+#dashboard-7 .cards.second > .card.three > .item > .content.two > .title {
+  position: absolute;
+  top: 160px;
+  left: -15px;
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+}
+
+/* content(2), desc */
+#dashboard-7 .cards.second .card.three .item .content.two .desc {
+  font-size: var(--font-small);
+  position: absolute;
+  width: 225px;
+  height: 70px;
+  top: 185px;
+  left: -75px;  
+  text-align: left;
+  padding: 10px;
+}
+
+/* content (1)과 (2)를 나누는 세로 선 */
+#dashboard-7 .cards.second .card.three .item .circle::before {
+  content: "";
+  background-color: var(--color-black);
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  top: 22px;
+  left: 10px;
+}
+
+/* -------------------------------------------------
+  시계열 예측
+------------------------------------------------- */
+
+/* circle, 큰동그라미 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(1) {
+  width: 150px;
+  height: 150px;
+  top: -30px;
+  left: -132px;
+  border: 8px solid var(--color-green);
+  background: rgb(255, 255, 255);
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all var(--animation-duration) ease;
+  z-index: 1;
+}
+
+/* circle, 큰동그라미, hover */
+#dashboard-7 .cards.second .card.four .item div:nth-child(1):hover {
+  transform: scale(1.2) rotate(45deg);
+  background: var(--color-green);
+  color: var(--color-white);
+}
+
+/* -------------------------------------------------
+  단변수 예측
+------------------------------------------------- */
+
+/* title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(2) {
+  position: absolute;
+  width: 110px;
+  height: 75px;
+  top: -90px;
+  left: -48px;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  text-align: right;
+  padding-right: 4px;
+  padding-top: 4px;
+  font-size: .9rem;
+  font-weight: 900;  
+}
+
+/* circle */
+#dashboard-7 .cards.second .card.four .item div:nth-child(3) {
+  top: -15px;
+  left: 48px;
+}
+
+/* content, 단변수 예측, Navie Mean (Yesterday, Value) : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(1) {
+  font-size: 11px;
+  font-weight: var(--weight-regular);
+  position: absolute;
+  top: -73px;
+  left: 8%;
+  transform: rotate(-55deg);
+}
+
+/* content, 단변수 예측, Navie Mean (Yesterday, Value) : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 94px;
+  bottom: -15px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;  
+}
+
+/* content, 단변수 예측, Navie Mean (Yesterday, Value) : 선 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  width: 95px;
+  right: 1px;
+  bottom: -10px;
+  border: 1px dashed black;
+  border-top: 1px dashed black;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;  
+}
+
+/* content, 단변수 예측, SES : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(2) {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  position: absolute;
+  top: -36px;
+  left: 20%;
+  transform: rotate(-55deg);  
+}
+
+/* content, 단변수 예측, SES : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: -4px;
+  right: 29px;
+  background-color: var(--color-white);
+  border: 1px solid black;
+  border-radius: 50%; 
+}
+
+/* content, 단변수 예측, SES : 선 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  right: 0px;
+  bottom: 1px;  
+  border: 1px dashed black;
+  border-top: 1px dashed black;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;  
+}
+
+/* content, 단변수 예측, HWES : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(3) {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  position: absolute;
+  top: -40px;
+  left: 28%;
+  transform: rotate(-55deg);
+}
+
+/* content, 단변수 예측, HWES : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 5px;
+  right: 48px;
+  background-color: var(--color-white);
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+/* content, 단변수 예측, AR : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(4) {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  position: absolute;
+  top: -36px;
+  left: 36%;
+  transform: rotate(-55deg);
+}
+
+/* content, 단변수 예측, AR : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 5px;
+  right: 33px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+
+/* content, 단변수 예측, MA : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(5) {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  position: absolute;
+  top: -36px;
+  left: 44%;
+  transform: rotate(-55deg);
+}
+
+/* content, 단변수 예측, MA : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(5)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 5px;
+  right: 34px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+
+/* content, 단변수 예측, ARMA : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(6) {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: rotate(-55deg);
+}
+
+/* content, 단변수 예측, ARMA : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(6)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 5px;
+  right: 48px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+
+/* content, 단변수 예측, ARIMA : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(7) {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  position: absolute;
+  top: -40px;
+  left: 58%;
+  transform: rotate(-55deg);
+}
+
+/* content, 단변수 예측, ARIMA : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(7)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  bottom: 5px;
+  right: 49px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+}
+
+/* content, 단변수 예측, Auto ARIMA : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(8) {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  position: absolute;
+  top: -55px;
+  left: 64%;
+  transform: rotate(-55deg);
+}
+
+/* content, 단변수 예측, Auto ARIMA : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(8)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 5px;
+  right: 86px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+
+/* content, 단변수 예측, Seasonal ARIMA : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(9) {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  position: absolute;
+  top: -67px;
+  left: 72%;
+  transform: rotate(-55deg);
+}
+
+/* content, 단변수 예측, Seasonal ARIMA : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(9)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 5px;
+  right: 117px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+
+/* content, 단변수 예측, Auto SARIA : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(10) {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  position: absolute;
+  top: -60px;
+  left: 80%;
+  transform: rotate(-55deg);
+}
+
+/* content, 단변수 예측, Auto SARIA : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(10)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 5px;
+  right: 97px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+
+/* content, 단변수 예측, Prophet : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(11) {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  position: absolute;
+  top: -48px;
+  left: 88%;
+  transform: rotate(-55deg);
+}
+
+/* content, 단변수 예측, Prophet : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(4) a:nth-child(11)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 5px;
+  right: 65px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+
+/* -------------------------------------------------
+  다변수 예측
+------------------------------------------------- */
+
+/* title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(5) {
+  position: absolute;
+  width: 110px;
+  height: 95px;
+  top: 85px;
+  left: -48px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  text-align: right;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  font-size: .9rem;
+  font-weight: 900;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* circle */
+#dashboard-7 .cards.second .card.four .item div:nth-child(6) {
+  top: 60px;
+  left: 48px;
+}
+
+/* 다변수 예측, Linear Models : content */
+#dashboard-7 .cards.second .card.four .item div:nth-child(7) {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  top: 19px;
+  left: 13%;
+  border: 2px solid black;
+  border-right: 0;
+  border-bottom: 0;  
+  padding-top: 5px;
+  padding-left: 10px;
+  background: transparent;
+  font-size: var(--font-small);    
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;  
+}
+
+/* 다변수 예측, Linear Models : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(7)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 47px;
+  left: -6px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);  
+  border-radius: 50%;  
+}
+
+/* 다변수 예측, Linear Models : 타이틀 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(7)::after {
+  content: "Linear Models";
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  top: 60px;
+  left: -46px;
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+}
+
+/* 다변수 예측, Tree Model : content */
+#dashboard-7 .cards.second .card.four .item div:nth-child(8) {
+  position: absolute;
+  width: 205px;
+  height: 145px;
+  top: 78px;
+  left: 12%;
+  border: 2px solid black;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  padding-right: 5px;
+  background: transparent;
+  font-size: var(--font-small);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;  
+}
+
+/* 다변수 예측, Tree Model : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(8)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  left: 199px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+
+/* 다변수 예측, Tree Model : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(8)::after {
+  content: "Tree Model";
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  top: -30px;
+  left: 158px;
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+}
+
+/* 다변수 예측, Deep Learning : content */
+#dashboard-7 .cards.second .card.four .item div:nth-child(9) {
+  position: absolute;
+  width: 125px;
+  height: 50px;
+  top: 19px;
+  left: 45%;
+  border: 2px solid black;
+  border-right: 0;
+  border-bottom: 0;
+  padding-top: 5px;
+  padding-left: 10px;
+  background: transparent;
+  font-size: var(--font-small);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* 다변수 예측, Deep Learning : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(9)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 47px;
+  left: -6px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+
+/* 다변수 예측, Deep Learning : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(9)::after {
+  content: "Deep Learning";
+  position: absolute;
+  width: 110px;
+  height: 10px;
+  top: 60px;
+  left: -46px;
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+}
+
+/* 다변수 예측, Hyperparameter Optimization : content */
+#dashboard-7 .cards.second .card.four .item div:nth-child(10) {
+  position: absolute;
+  width: 255px;
+  height: 50px;
+  top: 19px;
+  left: 68%;
+  border: 2px solid black;
+  border-right: 0;
+  border-bottom: 0;
+  background: transparent;
+  font-size: var(--font-small);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+  padding-top: 8px;
+  padding-left: 10px;
+}
+
+/* 다변수 예측, Hyperparameter Optimization : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(10)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 47px;
+  left: -6px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+
+/* 다변수 예측, Hyperparameter Optimization : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(10)::after {
+  content: "Hyperparameter Optimization";
+  position: absolute;
+  width: 220px;
+  height: 10px;
+  top: 60px;
+  left: -122px;
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+}
+
+/* 다변수 예측, Hyperparameter Optimization : content 남는선 지우기 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(10) a:last-child::after {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 10px;
+  top: -10px;
+  left: 192px;  
+  background: var(--color-white);
+}
+
+/* 다변수 예측, Ensenbling : content */
+#dashboard-7 .cards.second .card.four .item div:nth-child(11) {
+  position: absolute;
+  width: 245px;
+  height: 130px;
+  top: 78px;
+  left: 70%;
+  border: 2px solid black;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  padding-top: 5px;
+  padding-right: 5px;
+  background: transparent;
+  font-size: var(--font-small);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* 다변수 예측, Ensenbling : 점 */
+#dashboard-7 .cards.second .card.four .item div:nth-child(11)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  left: 239px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+}
+
+/* 다변수 예측, Ensenbling : title */
+#dashboard-7 .cards.second .card.four .item div:nth-child(11)::after {
+  content: "Ensenbling";
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  top: -30px;
+  left: 195px;
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+}
+
+/* ******************************************************************************************** 
+
+      .cards.third
+
+******************************************************************************************** */
+
+#dashboard-7 .cards.third .card.seven .item {
+  height: 200px;
+}
+
+#dashboard-7 .cards.third .card.one {
+  border-top: none;
+  top: -2px;
+}
+
+#dashboard-7 .cards.third .card.four,
+#dashboard-7 .cards.third .card.five,
+#dashboard-7 .cards.third .card.six,
+#dashboard-7 .cards.third .card.seven {
+  border-top: none;
+}
+
+/* ******************************************************************************************** 
+
+      .cards.fourth
+
+******************************************************************************************** */
+
+#dashboard-7 .cards.fourth .card .item {
+  width: 90px;
+  height: 110px;
+}
+
+#dashboard-7 .cards.fourth .card .item .title {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  top: -65px;
+  left: -75px;
+}
+
+/* circle, 공통 */
+#dashboard-7 .cards.fourth .card .item .circle {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: 50%;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+/* circle, 큰동그라미 */
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(1) {
+  width: 150px;
+  height: 150px;
+  top: 70px;
+  left: -80px;
+  border: 8px solid var(--color-skyblue);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all var(--animation-duration) ease;
+}
+
+/* 
+ * circle, 큰동그라미, hover 
+ * 설명 : 성능 분석 큰 동그라미에 마우스를 올려놨을 때의 이벤트 처리
+ * start
+ */
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover {
+  transform: scale(1.2) rotate(-45deg);
+  background: var(--color-skyblue);
+  color: var(--color-white);
+}
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover ~ div.circle {
+  background: var(--color-skyblue);
+}
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover ~ div.square, 
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover ~ div > a {
+  border: 5px dashed var(--color-skyblue);
+}
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(1):hover+div.square {
+  border: 5px dashed var(--color-skyblue);
+  border-right: none;
+}
+/* end */
+
+#dashboard-7 .cards.fourth .card.one .item .square {
+  position: absolute;
+  width: 600%;
+  height: 120px;
+  top: 80px;
+  left: 63px;
+  background: transparent;
+  border: 5px solid var(--color-skyblue);
+  border-right: none;
+  border-radius: 200px 0 0 200px;
+}
+
+/* title : 시계열 예측 분석(수치메트릭) */
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(3) {
+  font-size: .9rem;
+  position: absolute;
+  width: 160px;
+  border-left: 2px solid black;
+  text-align: left;
+  padding-left: 4px;
+  font-weight: 900;
+  height: 60px;
+  top: 10px;
+  left: 126px;
+}
+
+/* circle : 시계열 예측 분석(수치메트릭) */
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(4) {
+  top: 70px;
+  left: 115px;  
+}
+
+/* title : 시계열 예측 분석(차트) */
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(5) {
+  font-size: .9rem;
+  position: absolute;
+  width: 160px;
+  border-left: 2px solid black;
+  text-align: left;
+  padding-left: 4px;
+  font-weight: 900;
+  height: 60px;
+  top: 125px;
+  left: 126px;
+}
+
+/* circle : 시계열 예측 분석(차트) */
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(6) {
+  top: 185px;
+  left: 115px;
+}
+
+/* 수치 메트릭 */
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(7) {
+  position: absolute;
+  background: var(--color-white);
+  border: 5px solid var(--color-skyblue);
+  width: 580%;
+  height: 100px;
+  left: 95%;
+  top: 30px;
+  border-radius: 10px;
+  line-height: 100px;
+}
+
+/* 차트 */
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a {
+  position: absolute;
+  background: var(--color-white);
+  border: 5px solid var(--color-skyblue);
+  width: 125%;
+  height: 100px;
+  top: 150px;
+  border-radius: 10px;
+  line-height: 100px;
+}
+
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(1) {
+  left: 95%;
+}
+
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(2) {
+  left: 250%;
+}
+
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(3) {
+  left: 400%;
+}
+
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(8) a:nth-child(4) {
+  left: 550%;
+}
+
+/* ******************************************************************************************** 
+
+      line
+
+******************************************************************************************** */
+#dashboard-7 .cards.first .card {
+  border-top: 5px solid var(--color-wine);
+}
+
+#dashboard-7 .cards.first .card.four,
+#dashboard-7 .cards.first .card.five,
+#dashboard-7 .cards.first .card.six,
+#dashboard-7 .cards.first .card.seven {
+  border-bottom: 5px solid var(--color-wine);
+}
+
+#dashboard-7 .cards.first .card.seven {
+  border-right: 5px solid var(--color-wine);
+  /* border-bottom: 5px solid var(--color-wine); */
+  border-radius: 0 20px 20px 0;
+}
+
+#dashboard-7 .cards.second .card {
+  border-top: 5px solid var(--color-wine);
+  top: -5px;
+}
+
+#dashboard-7 .cards.second .card.one {
+  border-left: 5px solid var(--color-wine);
+  border-bottom: 5px solid var(--color-purple);
+  border-radius: 20px 0 0 20px;
+  top: -5px;
+  left: 60px;
+}
+
+#dashboard-7 .cards.second .card.four {
+  border-top: none;
+}
+
+/* 시계열 예측 : 가장 큰 네모 상자 */
+#dashboard-7 .cards.second .card.four .item {
+  border: 5px solid var(--color-green);
+  border-radius: 50px 20px 0 50px;
+  position: absolute;
+  height: 80px;
+  top: 105px;
+}
+
+#dashboard-7 .cards.third .card {
+  border-top: 5px solid var(--color-purple);
+  top: -10px;
+}
+
+#dashboard-7 .cards.third .card.seven {
+  border-right: 5px solid var(--color-green);
+  border-bottom: 5px solid var(--color-green);
+  border-radius: 0 0 20px 0;
+}
+
+#dashboard-7 .cards.fourth .card {
+  border-top: 5px solid var(--color-green);
+  top: -15px;
+}
+
+#dashboard-7 .cards.fourth .card.seven {
+  border-top: none;
+}
+
+#dashboard-7 .cards.fourth .card.one {
+  border-left: 5px solid var(--color-green);
+  border-radius: 20px 0 0 20px;
+  left: 60px;
+}
+
+/* 순번 : 성능 분석 - before */
+#dashboard-7 .cards.fourth .card.one .item div:nth-child(1)::before {
+  content: "시계열 예측 분석";
+  background-color: transparent;
+  font-size: var(--font-small);
+  font-weight: 400;
+  position: absolute;
+  width: 125px;
+  height: 15px;
+  top: 80px;
+  left: 4px;
+}
+

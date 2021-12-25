@@ -1,0 +1,231 @@
+/**
+ * 파일명 : Dashboard-4.css
+ * 설 명 : 대쉬보드 4번 화면
+ * 최초 생성일 : 
+ *
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+
+#dashboard-4 {
+  margin: 0;
+  width: 98%;
+  height: 100%;  
+  color: rgb(224, 228, 228);
+  background: rgb(34, 36, 41);  
+}
+
+#dashboard-4 a {
+  text-decoration: none;
+  color: var(--color-dark-grey);
+  font-weight: 600;
+  transition: all 300ms ease-in-out;
+}
+
+#dashboard-4 a:hover {
+  color: #41C7C7;
+}
+
+#dashboard-4 .no {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+
+/*======================================================================================================
+header, footer, arrow
+======================================================================================================*/
+#dashboard-4 .header,
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 19.89px;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(65, 199, 199);
+}
+
+#dashboard-4 .header {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+#dashboard-4 .footer {
+  position: relative;
+  margin-top: 30px;
+}
+
+#dashboard-4 .arrow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 0px solid rgb(34, 36, 41);
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-dark-grey);
+}
+
+#dashboard-4 .arrow-top {
+  top: 37px;
+  transform: translateX(-155%);
+}
+
+#dashboard-4 .arrow-height {
+  right: -25px;
+  transform: translateY(610%);
+}
+
+#dashboard-4 .arrow-bottom {
+  top: -54px;
+  transform: translateX(25%);
+}
+
+/*======================================================================================================
+main
+======================================================================================================*/
+#dashboard-4 .main {  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 85%;
+}
+
+#dashboard-4 .main .cards {
+  position: relative;
+  display: grid;
+}
+
+#dashboard-4 .main .cards .card {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  justify-items: center;
+  align-items: center;
+}
+
+/*======================================================================================================
+시계열 준비
+======================================================================================================*/
+
+#dashboard-4 .main .cards .card .item {
+  border: 1px dashed rgb(92, 96, 105);
+  width: 100%;
+  height: 95%;
+  border-radius: 10px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#dashboard-4 .main .cards .card .item .sub-item {
+  width: 100%;
+  grid-gap: .5rem;
+  text-align: center;
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#dashboard-4 .main .cards .card .item .sub-item ul:last-child {
+  grid-column: 1 / -1;  
+}
+
+#dashboard-4 #multi.card {
+  margin-bottom: 0;
+}
+
+#dashboard-4 #multi.card .no {
+  padding-right: .5rem;
+}
+
+#dashboard-4 #multi .sub-item {
+  margin-left: 1.5rem;
+}
+
+#dashboard-4 .main .cards .card .item .sub-item ul,
+#dashboard-4 .main .cards .card .item .sub-item li {
+  margin: 0;
+  text-align: left;
+}
+
+#dashboard-4 .main .cards .card .item .sub-item ul li:last-child {
+  grid-template-columns: 1fr;
+}
+
+#dashboard-4 .main .cards .card .item .sub-item ul {
+  font-size: .9rem;
+}
+
+#dashboard-4 .main .cards .card .item .sub-item li {
+  font-size: .8rem;
+  line-height: 1.2rem;
+  padding-left: 1rem;
+  color: var(--color-dark-grey);
+}
+
+#dashboard-4 .main .cards .card {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+#dashboard-4 .main .cards:nth-child(odd) .card:first-child {
+  margin-top: 2rem;
+}
+
+#dashboard-4 .main .cards:nth-child(even) .card:last-child {
+  margin-bottom: 2rem;
+}
+
+#dashboard-4 .cards.data-preparation {
+  border-top: 1px solid rgb(92, 96, 105);
+  border-right: 1px solid rgb(92, 96, 105);
+  padding-right: 1rem;
+}
+
+#dashboard-4 .cards.time-series-preparation {
+  border-bottom: 1px solid rgb(92, 96, 105);
+  border-right: 1px solid rgb(92, 96, 105);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#dashboard-4 .time-series-forecasting {
+  border-top: 1px solid rgb(92, 96, 105);
+  border-right: 1px solid rgb(92, 96, 105);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#dashboard-4 .performance-analysis {
+  border-bottom: 1px solid rgb(92, 96, 105);
+  padding-left: 1rem;
+}
+
+/*======================================================================================================
+8. 시계열 정상성 검사 및 변환
+======================================================================================================*/
+
+.card .item ul {
+  margin-bottom: .5rem;
+}
+
+.card .item li {
+  padding-left: 3rem;
+  margin: 1rem 0;
+}
+
+.card .item .sub-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*======================================================================================================
+9. 단변수 예측
+======================================================================================================*/
+
+#dashboard-4 .cards.time-series-forecasting a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

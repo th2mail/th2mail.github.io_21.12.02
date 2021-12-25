@@ -1,0 +1,113 @@
+/**
+ * 파일명 : Dashboard-3.css
+ * 설 명 : 대쉬보드 3번 화면
+ * 최초 생성일 : 
+ *
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+
+#dashboard-3 {
+  background-color: rgb(34, 36, 41);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#dashboard-3 h1 {
+  margin-bottom: 8rem;
+}
+
+#dashboard-3 h1,
+#dashboard-3 div {
+  color: rgb(224, 228, 228);
+}
+
+#dashboard-3 .box {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#dashboard-3 .box>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dashboard-3 .box>div:first-child {
+  margin-left: 5rem;
+}
+
+#dashboard-3 .title {
+  width: 10rem;
+  margin-right: 5rem;
+  font-size: var(--font-regular);
+}
+
+#dashboard-3 .sub-title {
+  border-radius: 50%;
+}
+
+#dashboard-3 .sub-title {
+  width: 100px;
+  height: 100px;
+}
+
+#dashboard-3 .box1 .sub-title {
+  border: 2px solid rgb(27, 165, 165);
+  box-shadow: 2px 2px 5px rgb(27, 165, 165);
+  transition: all 300ms ease-in-out;
+}
+
+#dashboard-3 .box1 .sub-title:hover {
+  transform: scale(1.3);
+  background-color: rgb(27, 165, 165);
+  color: rgb(224, 228, 228);
+  font-weight: var(--weight-bold);
+}
+
+#dashboard-3 .box2 .sub-title {
+  border: 2px solid rgb(246, 73, 167);
+  box-shadow: 2px 2px 5px rgb(246, 73, 167);
+  transition: all 300ms ease-in-out;
+}
+
+#dashboard-3 .box2 .sub-title:hover {
+  transform: scale(1.3);
+  background-color: rgb(246, 73, 167);
+  color: rgb(224, 228, 228);
+  font-weight: var(--weight-bold);
+}
+
+#dashboard-3 .box3 .sub-title {
+  border: 2px solid rgb(254, 106, 106);
+  box-shadow: 2px 2px 5px rgb(254, 106, 106);
+  transition: all 300ms ease-in-out;
+}
+
+#dashboard-03 .box3 .sub-title:hover {
+  transform: scale(1.3);
+  background-color: rgb(254, 106, 106);
+  color: rgb(224, 228, 228);
+  font-weight: var(--weight-bold);
+}
+
+#dashboard-3 .box4 .sub-title {
+  border: 2px solid rgb(251, 243, 76);
+  box-shadow: 2px 2px 5px rgb(251, 243, 76);
+  transition: all 300ms ease-in-out;
+}
+
+#dashboard-3 .box4 .sub-title:hover {
+  transform: scale(1.3);
+  background-color: rgb(251, 243, 76);
+  color: var(--color-dark-white);
+  font-weight: var(--weight-bold);
+}
+
+.canvas {
+  width: 80px;
+  height: 80px;
+}

@@ -1,0 +1,81 @@
+/**
+ * 파일명 : Dashboard-1.css
+ * 설 명 : 대쉬보드 1번 화면
+ * 최초 생성일 : 
+ *
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+
+#dashboard-1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+#dashboard-1 .cards {
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+#dashboard-1 .card {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+#dashboard-1 .card .svg-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 320px;
+}
+
+#dashboard-1 .card .svg-wrapper .shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -510;
+  stroke-width: 0;
+  fill: transparent;
+  stroke: #19f6e8;
+  border-bottom: 5px solid black;
+  transition: stroke-width 300ms, stroke-dashoffset 700ms, stroke-dasharray 700ms;
+}
+
+#dashboard-1 .card .svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 840;
+}
+
+#dashboard-1 .card .svg-wrapper:hover .item {
+  color: #41C7C7;
+  // text-shadow: rgb(65 199 199 / 90%) 0px 2px 7px;
+}
+
+#dashboard-1 .card .svg-wrapper:hover .item .font {
+  font-size: 3rem;
+}
+
+#dashboard-1 .card .item {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 150ms ease-in 0s;
+}
+
+#dashboard-1 .card .item .text {
+  letter-spacing: 2.5px;
+}
+
+#dashboard-1 .card .item .font {
+  font-size: 2rem;
+}

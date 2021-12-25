@@ -1,0 +1,278 @@
+<!-- 
+  파일명 : Dashboard-4.html
+  설 명 : 대쉬보드 4번
+	최초 생성일 : 
+
+	수정일			수정내역 
+	---------		-----------------------------------------------------------------
+	
+-->
+<script src="/src/main/webapp/assert/js/Dashboard/Dashboard-4.js" defer></script>
+
+<!-- header -->
+<div class="header">
+
+  <div class="card">
+    데이터 준비
+    <button class="arrow arrow-top">
+      <i class="las la-arrow-right"></i>
+    </button>
+  </div>
+
+  <div class="card"></div>
+
+  <div class="card">
+    시계열 예측
+    <!-- arrow-top -->
+    <button class="arrow arrow-top">
+      <i class="las la-arrow-right"></i>
+    </button>
+    <!--// arrow-top -->
+  </div>
+
+  <div class="card"></div>
+
+</div>
+<!--// header -->
+
+<!-- main -->
+<div class="main">
+
+  <div class="cards data-preparation">
+    <div class="card">
+      <div class="no">1</div>
+      <div class="item">
+        <div class="title">센서데이터 현황</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="no">2</div>
+      <div class="item">
+        <div class="title">센서데이터 선택</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="no">3</div>
+      <div class="item">
+        <div class="title">데이터 탐험</div>
+        <div class="sub-item">
+          <a href="">
+            <span class="to-right-underline">Pandas Profiler</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">SweetViz</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="no">4</div>
+      <div class="item">
+        <div class="title">데이터 로딩 & 프리뷰</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="no">5</div>
+      <div class="item">
+        <div class="title">상관관계 시각화</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="no">6</div>
+      <div class="item">
+        <div class="title">데이터 전처리</div>
+        <div class="sub-item">
+          <a href="" style="font-size: 15px;">
+            <span class="to-right-underline">결측치 시각화 및 처리</span>
+          </a>
+          <a href="" style="font-size: 15px;">
+            <span class="to-right-underline">이상치 시각화 및 처리</span>
+          </a>
+          <a href="" style="font-size: 15px;">
+            <span class="to-right-underline">리셈플링 및 정규화</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- arrow-height -->
+    <button class="arrow arrow-height">
+      <i class="las la-arrow-down"></i>
+    </button>
+    <!--// arrow-height -->
+
+  </div>
+
+  <div class="cards time-series-preparation">
+    <div class="card">
+      <div class="no">7</div>
+      <div class="item">
+        <div class="title">시계열 데이터 분해</div>
+        <div class="sub-item">
+          <a href="">
+            <span class="to-right-underline">레벨</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">트렌드</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">계절성</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">잡음</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="no">8</div>
+      <div class="item">
+        <div class="title">시계열 정상성 검사 및 변환</div>
+        <div>
+          <ul>정상성 검사
+            <li><a href="" class="to-right-underline">Augmented Dicker-Fuller test</a></li>
+            <li><a href="" class="to-right-underline">Auto Correlation</a></li>
+            <li><a href="" class="to-right-underline">Partial Auto Correlation</a></li>
+          </ul>
+          <ul>변환
+            <li><a href="" class="to-right-underline">Difference</a></li>
+            <li><a href="" class="to-right-underline">Log Scale</a></li>
+            <li><a href="" class="to-right-underline">Smoothing</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- arrow-height -->
+    <button class="arrow arrow-height">
+      <i class="las la-arrow-up"></i>
+    </button>
+    <!--// arrow-height -->
+  </div>
+
+  <div class="cards time-series-forecasting">
+    <div class="card">
+      <div class="no">9</div>
+      <div class="item">
+        <div class="title">단변수 예측</div>
+        <div class="sub-item">
+          <a href="" style="font-size: 15px;">
+            <span class="to-right-underline">Naive Mean,<br>Yesterday Value<span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">ARIMA</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">SES</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">Auto ARIMA</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">HWES</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">Seasonal ARIMA</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">AR</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">Auto SARIMA</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">MA</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">Prophet</span>
+          </a>
+          <a href="">
+            <span class="to-right-underline">ARMA</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="multi" class="card">
+      <div class="no">10</div>
+      <div class="item">
+        <div class="title">다변수 예측</div>
+        <div class="sub-item">
+          <ul>Linear Models
+            <li><span class="to-right-underline">Baysian Regression</span></li>
+            <li><span class="to-right-underline">Lasso</span></li>
+          </ul>
+          <ul>Deep Learning
+            <li><span class="to-right-underline">Tensorflow LSTM</span></li>
+            <li><span class="to-right-underline">DeepAR</span></li>
+          </ul>
+          <ul>Tree Model
+            <li><span class="to-right-underline">Random Forest</span></li>
+            <li><span class="to-right-underline">XGBoost</span></li>
+            <li><span class="to-right-underline">Lightgbn</span></li>
+            <li><span class="to-right-underline" style="font-size: 10px;">Support Vector Machines</span></li>
+            <li><span class="to-right-underline">Nearest neighbors</span></li>
+            <li><span class="to-right-underline">Prophet multivariate</span></li>
+          </ul>
+          <ul>Hyperparameter Optimization
+            <li><span class="to-right-underline">Grid Search</span></li>
+            <li><span class="to-right-underline">SVM</span></li>
+            <li><span class="to-right-underline">Baysian Process</span></li>
+            <li><span class="to-right-underline">XGBoost</span></li>
+          </ul>
+          <ul>Ensenbling
+            <li><span class="to-right-underline">XGBoost + Tensorflow</span></li>
+            <li><span class="to-right-underline">XGBoost + Lightgbm</span></li>
+            <li><span class="to-right-underline">Lightgbm + Tensorflow</span></li>
+            <li><span class="to-right-underline">XGBoost + Lightgbm + Tensorflow</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- arrow-height -->
+    <button class="arrow arrow-height">
+      <i class="las la-arrow-down"></i>
+    </button>
+    <!--// arrow-height -->
+  </div>
+
+  <div class="cards performance-analysis">
+    <div class="card">
+      <div class="no">11</div>
+      <div class="item">
+        시계열 예측 분석
+        <a href="">수치 메트릭</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="no">12</div>
+      <div class="item">
+        시계열 예측 분석
+        <a href="">차트</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--// main -->
+
+<!-- footer -->
+<div class="footer">
+
+  <div class="card"></div>
+
+  <div class="card">
+    <button class="arrow arrow-bottom">
+      <i class="las la-arrow-right"></i>
+    </button>
+    시계열 준비
+  </div>
+
+  <div class="card"></div>
+
+  <div class="card">
+    <button class="arrow arrow-bottom">
+      <i class="las la-arrow-right"></i>
+    </button>
+    성능 분석
+  </div>
+
+</div>
+<!--// footer -->

@@ -1,0 +1,190 @@
+<script src="/src/main/webapp/assert/js/ScreenLayout/Navigation.js" defer></script>
+
+<!-- sidebar -->
+<div class="sidebar">
+
+  <!-- nav_list -->
+  <ul class="nav_list">
+    <li class="menu" data-title="대쉬보드">
+      <a href="#">
+        <span class="no">D</span>
+      </a>
+      <span class="tooltip">Dashboard</span>
+    </li>
+    <li class="menu" data-title="센서 데이터 현황">
+      <a href="#">
+        <span class="no">1</span>
+      </a>
+      <span class="tooltip">센서 데이터 현황</span>
+    </li>
+    <li class="menu" data-title="센서 데이터 선택">
+      <a href="#">
+        <span class="no">2</span>
+      </a>
+      <span class="tooltip">센서 데이터 선택</span>
+    </li>
+    <li class="menu" data-title="데이터 탐험">
+      <a href="#">
+        <span class="no">3</span>
+      </a>
+      <span class="tooltip">데이터 탐험</span>
+    </li>
+    <li class="menu" data-title="데이터 로딩 & 프리뷰">
+      <a href="#">
+        <span class="no">4</span>
+      </a>
+      <span class="tooltip">데이터 로딩 & 프리뷰</span>
+    </li>
+    <li class="menu" data-title="상관관계 시각화">
+      <a href="#">
+        <span class="no">5</span>
+      </a>
+      <span class="tooltip">상관관계 시각화</span>
+    </li>
+    <li class="menu" data-title="데이터 전처리">
+      <a href="#">
+        <span class="no">6</span>
+      </a>
+      <span class="tooltip">데이터 전처리</span>
+    </li>
+    <li class="menu" data-title="시계열 데이터 분해">
+      <a href="#">
+        <span class="no">7</span>
+      </a>
+      <span class="tooltip">시계열 데이터 분해</span>
+    </li>
+    <li class="menu" data-title="시계열 정상성 검사 및 변환">
+      <a href="#">
+        <span class="no">8</span>
+      </a>
+      <span class="tooltip">시계열 정상성 검사 및 변환</span>
+    </li>
+    <li class="menu" data-title="단변수 예측">
+      <a href="#">
+        <span class="no">9</span>
+      </a>
+      <span class="tooltip">단변수 예측</span>
+    </li>
+    <li class="menu" data-title="다변수 예측">
+      <a href="#">
+        <span class="no">10</span>
+      </a>
+      <span class="tooltip">다변수 예측</span>
+    </li>
+    <li class="menu" data-title="시계열 예측 분석 (수치 메트릭)">
+      <a href="#">
+        <span class="no">11</span>
+      </a>
+      <span class="tooltip">시계열 예측 분석 (수치 메트릭)</span>
+    </li>
+    <li class="menu" data-title="시계열 예측 분석 (차트)">
+      <a href="#">
+        <span class="no">12</span>
+      </a>
+      <span class="tooltip">시계열 예측 분석 (차트)</span>
+    </li>
+  </ul>
+  <!--// nav_list -->
+
+  <div class="rightbar">
+    <div class="title-wrapper">
+      <input type="text" class="title"></input>
+    </div>
+
+    <!-- 데이터 탐험 -->
+    <div class="item three">
+      <div class="desc">Pandas Profiler</div>
+      <div class="desc">Sweetviz</div>
+    </div>
+
+    <!-- 시계열 데이터 분해 -->
+    <div class="item seven">
+      <div class="desc">레벨</div>
+      <div class="desc">트렌드</div>
+      <div class="desc">계절성</div>
+      <div class="desc">잡음</div>
+    </div>
+
+    <!-- 시계열 정상성 검사 및 변환 -->
+    <div class="item eight">
+      <div class="">
+        <div class="title">정상성 검사</div>
+        <a href="" class="desc">Augmented Dicker-Fuller test</a>
+        <a href="" class="desc">Auto Correlation</a>
+        <a href="" class="desc">Partial Auto Correlation</a>
+      </div>
+      <div class="">
+        <div class="title">변환</div>
+        <a href="" class="desc">Difference Log Scale</a>
+        <a href="" class="desc">Smoothing</a>
+      </div>
+    </div>
+
+    <!-- 단변수 예측 -->
+    <div class="item nine">
+      <a class="desc">Navie Mean(Yesterday, Value)</a>
+      <a class="desc">SES</a>
+      <a class="desc">HWES</a>
+      <a class="desc">AR</a>
+      <a class="desc">MA</a>
+      <a class="desc">ARMA</a>
+      <a class="desc">ARIMA</a>
+      <a class="desc">Auto ARIMA</a>
+      <a class="desc">Seasonal ARIMA</a>
+      <a class="desc">Auto SARIMA</a>
+      <a class="desc">Prophet</a>
+    </div>
+
+    <!-- 다변수 예측 -->
+    <div class="item ten">
+      <div>
+        <div class="title">Linear Models</div>
+        <a href="" class="desc">Baysian Regression</a>
+        <a href="" class="desc">Lasso</a>
+      </div>
+      <div>
+        <div class="title">Tree Model</div>
+        <a href="" class="desc">Random Forest</a>
+        <a href=" class=" desc">Support Vector Machine</a>
+        <a href="" class="desc">XGBoost</a>
+        <a href="" class="desc">Nearest neighbors</a>
+        <a href="" class="desc">Lightgbm</a>
+        <a href="" class="desc">Prophet multivariate</a>
+      </div>
+      <div class="">
+        <div class="title">Deep Learning</div>
+        <a href="" class="desc">Tensorflow LSTM</a>
+        <a href="" class="desc">DeepAR</a>
+      </div>
+      <div class="">
+        <div class="title">Hyperparameter Optimization</div>
+        <a href="" class="desc">Grid Search</a>
+        <a href="" class="desc">SVM</a>
+        <a href="" class="desc">Baysian Process</a>
+        <a href="" class="desc">XGBoost</a>
+      </div>
+      <div class="">
+        <div class="title">Ensenbling</div>
+        <a href="" class="desc">XGBoost + Tensorflow</a>
+        <a href="" class="desc">XGBoost + Lightgbm</a>
+        <a href="" class="desc">Lightgbm + Tensorflow</a>
+        <a href="" class="desc">XGBoost + Lightgbm + Tensorflow</a>
+      </div>
+    </div>
+
+    <!-- 성능분석, 차트 -->
+    <div class="item twelve">
+      <a href="" class="desc">MAE</a>
+      <a href="" class="desc">MAPE</a>
+      <a href="" class="desc">RMSE</a>
+      <a href="" class="desc">R2</a>
+    </div>
+
+    <div class="close">
+      <i class="las la-angle-left"></i>
+    </div>
+
+  </div>
+
+</div>
+<!--// sidebar -->

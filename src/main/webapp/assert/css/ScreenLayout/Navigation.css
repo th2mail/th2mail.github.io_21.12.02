@@ -1,0 +1,270 @@
+@charset "UTF-8";
+/**
+ * 파일명 : Navigation.css
+ * 설 명 : 네비게이션
+ * 최초 생성일 : 
+ *
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+.sidebar {
+  position: fixed;
+  top: 82px;
+  left: 0;
+  height: 100%;
+  width: 78px;
+  background: #0e1318;
+  padding: 6px 14px;
+  z-index: 100;
+}
+
+.sidebar a {
+  color: var(--color-white);
+}
+
+/* ******************************************************************************************** 
+
+      .logo_content
+
+******************************************************************************************** */
+.sidebar .logo_content .logo {
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.logo_content .logo i {
+  font-size: 3rem;
+}
+
+/* ******************************************************************************************** 
+
+      .nav_list
+
+******************************************************************************************** */
+.sidebar ul {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar ul li {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 3px 5px;
+}
+
+.sidebar ul li .tooltip {
+  position: absolute;
+  left: 75px;
+  top: -10px;
+  border-radius: 10px;
+  height: 35px;
+  background: #11101d;
+  color: #fff;
+  line-height: 35px;
+  text-align: center;
+  -webkit-transition: 0s;
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 99;
+}
+
+/* 사이드바 메뉴리스트의 툴팁 가로 사이즈 */
+.sidebar ul li:nth-child(1) .tooltip,
+.sidebar ul li:nth-child(4) .tooltip,
+.sidebar ul li:nth-child(10) .tooltip,
+.sidebar ul li:nth-child(11) .tooltip {
+  width: 110px;
+}
+
+.sidebar ul li:nth-child(7) .tooltip {
+  width: 120px;
+}
+
+.sidebar ul li:nth-child(2) .tooltip,
+.sidebar ul li:nth-child(3) .tooltip,
+.sidebar ul li:nth-child(6) .tooltip {
+  width: 140px;
+}
+
+.sidebar ul li:nth-child(8) .tooltip {
+  width: 160px;
+}
+
+.sidebar ul li:nth-child(5) .tooltip {
+  width: 170px;
+}
+
+.sidebar ul li:nth-child(13) .tooltip {
+  width: 190px;
+}
+
+.sidebar ul li:nth-child(9) .tooltip {
+  width: 210px;
+}
+
+.sidebar ul li:nth-child(12) .tooltip {
+  width: 240px;
+}
+
+.sidebar ul li:hover .tooltip {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 1;
+  top: 8px;
+}
+
+.sidebar ul li a {
+  color: #818487;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-radius: 12px;
+}
+
+.sidebar ul li a:hover {
+  color: #11101d;
+  font-weight: 900;
+  background: #fff;
+  width: 50px;
+}
+
+.sidebar ul li.active,
+.sidebar ul li.active a {
+  background: #293039;
+  width: 78px;
+}
+
+.sidebar ul li.active a:hover {
+  background: #293039;
+  width: 78px;
+  color: #fff;
+}
+
+.sidebar ul li.active .tooltip {
+  display: none;
+}
+
+.sidebar ul li.open:hover .tooltip {
+  display: none;
+}
+
+.sidebar .rightbar {
+  position: absolute;
+  top: 0;
+  left: -265px;
+  height: 100%;
+  width: 265px;
+  padding: 1rem 1rem;
+}
+
+.sidebar .rightbar input.title {
+  margin-top: 1.5rem;
+  color: #FEC1A9;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  text-align: center;
+  width: 230px;
+}
+
+.sidebar .rightbar.active {
+  top: 0px;
+  left: 78px;
+  height: 100%;
+  width: 265px;
+  background: #293039;
+}
+
+.sidebar .rightbar.active .close {
+  opacity: 1;
+}
+
+.rightbar .close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #222429;
+  top: 50%;
+  left: 255px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 900;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 3px;
+  opacity: 0;
+}
+
+/* ******************************************************************************************** 
+
+      네비게이션 상세 화면
+
+******************************************************************************************** */
+.rightbar .title-wrapper {
+  margin-bottom: 5rem;
+}
+
+.rightbar .title-wrapper::after {
+  content: "";
+  position: absolute;
+  background-color: #FEC1A9;
+  width: 265px;
+  height: 1px;
+  top: 100px;
+  left: 0;
+}
+
+.rightbar .item {
+  color: white;
+  /* font-size: 1rem; */
+}
+
+.rightbar .item .title {
+  font-size: var(--font-regular);
+  margin: 1rem 0 5px 0;
+  display: inline-block;
+  border-bottom: 2px solid var(--color-white);
+}
+
+.rightbar .item .desc {
+  font-size: var(--font-small);
+  display: block;
+  margin: 1rem 0;
+}
+/*# sourceMappingURL=Navigation.css.map */

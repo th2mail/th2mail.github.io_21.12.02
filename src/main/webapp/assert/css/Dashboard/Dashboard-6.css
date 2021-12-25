@@ -1,0 +1,914 @@
+@charset "UTF-8";
+/**
+ * 파일명 : dashboard-6.css
+ * 설 명 : 대쉬보드 5번 화면
+ * 최초 생성일 : 
+ *
+ * 수정일			수정내역 
+ * ---------  -----------------------------------------------------------------
+ * 
+ */
+#dashboard-6 {
+  margin: 0;
+  padding: 100px 50px 50px 80px;
+  background: white;
+  color: black;
+  outline: none;
+  z-index: 2;
+}
+
+#dashboard-6 table {
+  width: 100%;
+  border-spacing: 0px;
+  text-align: center;
+}
+
+#dashboard-6 .cards .card {
+  position: relative;
+}
+
+/* 아이템의 기본 크기 */
+#dashboard-6 .cards .card .item {
+  width: 200px;
+  height: 140px;
+}
+
+/* ******************************************************************************************** 
+
+      .cards.first
+
+******************************************************************************************** */
+/* 데이터 준비 - 순번 */
+#dashboard-6 .cards.first .card .item .no {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-turquoise);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  top: -25px;
+}
+
+/* 번호 - 데이터 준비 */
+#dashboard-6 .cards.first .card .item .no.subject {
+  width: 150px;
+  height: 150px;
+  top: -80px;
+  left: -10px;
+  border: 10px solid var(--color-wine);
+  background: white;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* 데이터 탐험 - 아이템 */
+#dashboard-6 .cards.first .card.four .item .desc {
+  font-size: var(--font-small);
+  position: absolute;
+  width: 130px;
+  height: 70px;
+  border: 1px solid black;
+  border-radius: 10px;
+  top: 37px;
+  left: -41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* 데이터 탐험 - 아이템 - 연결선 */
+#dashboard-6 .cards.first .card.four .item .desc::before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  width: 5px;
+  height: 15px;
+  top: -22%;
+}
+
+#dashboard-6 .cards.third .card {
+  border-top: 5px solid var(--color-purple);
+  top: -10px;
+}
+
+/* ******************************************************************************************** 
+
+      .cards.second
+
+******************************************************************************************** */
+/* 순번 */
+#dashboard-6 .cards.second .card .item .no {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-turquoise);
+}
+
+/* -------------------------------------------------
+  시계열 준비
+   ------------------------------------------------- */
+/* 타이틀 */
+#dashboard-6 .cards.second .card.one .item .title {
+  position: absolute;
+  top: 70px;
+  left: 40px;
+}
+
+/* 시계열 준비 - 순번 */
+#dashboard-6 .cards.second .card.one .item .no {
+  top: 110px;
+  left: 50px;
+}
+
+/* 시계열 준비 - 순번 */
+#dashboard-6 .cards.second .card.one .item .no.subject {
+  width: 150px;
+  height: 150px;
+  top: 60px;
+  left: -10px;
+  border: 10px solid var(--color-purple);
+  background: white;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* -------------------------------------------------
+  시계열 데이터 분해
+   ------------------------------------------------- */
+/* 타이틀 */
+#dashboard-6 .cards.second .card.two .item .title {
+  position: absolute;
+  top: 49px;
+  left: -122px;
+  width: 200px;
+  height: 50px;
+}
+
+/* 순번 */
+#dashboard-6 .cards.second .card.two .item .no {
+  top: 115px;
+  left: -50px;
+}
+
+/* 아이템 */
+#dashboard-6 .cards.second .card.two .item .desc {
+  font-size: var(--font-small);
+  position: absolute;
+  top: 175px;
+  left: -89px;
+  width: 130px;
+  height: 70px;
+  border: 5px solid var(--color-purple);
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+/* 연결선 */
+#dashboard-6 .cards.second .card.two .item .desc::before {
+  content: "";
+  background-color: var(--color-purple);
+  position: absolute;
+  width: 5px;
+  height: 11px;
+  top: -16px;
+  left: 55px;
+}
+
+/* -------------------------------------------------
+  시계열 정상성 검사 및 변환
+   ------------------------------------------------- */
+/* 타이틀 */
+#dashboard-6 .cards.second .card.three .item .title {
+  position: absolute;
+  top: 49px;
+  left: -32px;
+}
+
+/* 순번 */
+#dashboard-6 .cards.second .card.three .item .no {
+  top: 115px;
+  left: -15px;
+  z-index: 1;
+}
+
+/* 아이템(1) */
+#dashboard-6 .cards.second .card.three .item .desc.one .subDesc {
+  font-size: 12px;
+  position: absolute;
+  top: 173px;
+  left: -151px;
+  width: 155px;
+  height: 70px;
+  border: 5px solid var(--color-purple);
+  border-radius: 10px;
+  text-align: left;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+/* 아이템(1) - 타이틀 */
+#dashboard-6 .cards.second .card.three .item .desc.one .subTitle {
+  position: absolute;
+  top: 145px;
+  left: -103px;
+  font-size: 12px;
+}
+
+/* 아이템(2) */
+#dashboard-6 .cards.second .card.three .item .desc.two .subDesc {
+  font-size: 13px;
+  position: absolute;
+  top: 173px;
+  left: 15px;
+  width: 100px;
+  height: 70px;
+  border: 5px solid var(--color-purple);
+  border-radius: 10px;
+  text-align: left;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+/* 아이템(2) - 타이틀 */
+#dashboard-6 .cards.second .card.three .item .desc.two .subTitle {
+  position: absolute;
+  top: 145px;
+  left: 40px;
+  font-size: 12px;
+  width: 50px;
+}
+
+/* 시계열 정상성 검사 및 변환, 순번, 세로 선 */
+#dashboard-6 .cards.second .card.three .item .no::before {
+  content: "";
+  background-color: var(--color-purple);
+  position: absolute;
+  width: 5px;
+  height: 6px;
+  top: 49px;
+  left: 21px;
+}
+
+/* 시계열 정상성 검사 및 변환, 순번, 가로 선 */
+#dashboard-6 .cards.second .card.three .item .no::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  left: -56px;
+  width: 138px;
+  height: 3px;
+  top: 52px;
+}
+
+/* 시계열 정상성 검사 및 변환, 왼쪽 내용, 위에 선 */
+#dashboard-6 .cards.second .card.three .item .desc.one .subDesc::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 80px;
+  top: -5px;
+}
+
+/* 시계열 정상성 검사 및 변환, 오른쪽 내용, 위에 선 */
+#dashboard-6 .cards.second .card.three .item .desc.two .subDesc::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 47px;
+  top: -5px;
+}
+
+/* -------------------------------------------------
+  시계열 예측
+   ------------------------------------------------- */
+/* 시계열 예측 - 순번 */
+#dashboard-6 .cards.second .card.four .item .no.subject {
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  left: -132px;
+  border: 10px solid var(--color-skyblue);
+  background: white;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* 타이틀 */
+#dashboard-6 .cards.second .card.four .item div:nth-child(1) {
+  position: absolute;
+  top: 10px;
+  left: -152px;
+  width: 200px;
+  height: 50px;
+}
+
+/* 순번 */
+#dashboard-6 .cards.second .card.four .item div:nth-child(2) {
+  top: 40px;
+  left: -75px;
+  z-index: 1;
+}
+
+/* -------------------------------------------------
+  단변수 예측
+   ------------------------------------------------- */
+/* 단변수 예측 - 타이틀 */
+#dashboard-6 .cards.second .card.four .item div:nth-child(3) {
+  position: absolute;
+  top: -55px;
+  left: -48px;
+  width: 200px;
+  height: 50px;
+}
+
+/* 단변수 예측 - 순번 */
+#dashboard-6 .cards.second .card.four .item div:nth-child(4) {
+  top: -25px;
+  left: 30px;
+  z-index: 1;
+}
+
+/* 아이템들 */
+#dashboard-6 .cards.second .card.four .item div:nth-child(5) {
+  position: absolute;
+  border: 1px solid black;
+  width: 83%;
+  height: 120px;
+  top: -60px;
+  left: 100px;
+  background-color: var(--color-white);
+  border-radius: 4px 4px 4px 4px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  grid-gap: 1px;
+}
+
+/* -------------------------------------------------
+  다변수 예측
+   ------------------------------------------------- */
+/* 다변수 예측 - 타이틀 */
+#dashboard-6 .cards.second .card.four .item div:nth-child(6) {
+  position: absolute;
+  top: 170px;
+  left: -48px;
+  width: 200px;
+  height: 50px;
+}
+
+/* 다변수 예측 - 순번 */
+#dashboard-6 .cards.second .card.four .item div:nth-child(7) {
+  top: 110px;
+  left: 30px;
+  z-index: 1;
+}
+
+/* 타이틀 */
+#dashboard-6 .cards.second .card.five .item .title {
+  position: absolute;
+  top: 20px;
+  left: -220px;
+  width: 100px;
+}
+
+/* 순번 */
+#dashboard-6 .cards.second .card.five .item .no {
+  top: 50px;
+  left: -180px;
+}
+
+/* 다변수 예측 - Linear Models */
+#dashboard-6 .cards.second .card.four .item div:nth-child(8) {
+  position: absolute;
+  top: 105px;
+  left: 100px;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  place-items: center;
+  grid-gap: 1px;
+  background-color: white;
+  font-size: 13px;
+  width: 140px;
+  height: 20px;
+  padding: 5px;
+}
+
+/* 순번 */
+#dashboard-6 .cards.second .card.four .item div:nth-child(9) {
+  position: absolute;
+  top: 155px;
+  left: 100px;
+  z-index: 1;
+  border: 1px solid black;
+  border-radius: 4px 4px 4px 4px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  place-items: center;
+  grid-gap: 1px;
+  background-color: white;
+  font-size: 13px;
+  width: 140px;
+  height: 60px;
+  padding: 10px;
+}
+
+#dashboard-6 .cards.second .card.four .item div:nth-child(9)::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 5px;
+  height: 17px;
+  top: -18px;
+  left: 65px;
+}
+
+/* 다변수 예측 - Linear Models */
+#dashboard-6 .cards.second .card.four .item div:nth-child(10) {
+  position: absolute;
+  top: 105px;
+  left: 280px;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  place-items: center;
+  grid-gap: 1px;
+  background-color: white;
+  font-size: 13px;
+  width: 140px;
+  height: 20px;
+  padding: 5px;
+}
+
+/* 순번 */
+#dashboard-6 .cards.second .card.four .item div:nth-child(11) {
+  position: absolute;
+  top: 155px;
+  left: 250px;
+  z-index: 1;
+  border: 1px solid black;
+  border-radius: 4px 4px 4px 4px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  background-color: white;
+  font-size: 11px;
+  width: 200px;
+  height: 100px;
+  padding: 5px;
+}
+
+#dashboard-6 .cards.second .card.four .item div:nth-child(11)::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 5px;
+  height: 17px;
+  top: -18px;
+  left: 95px;
+}
+
+/* 다변수 예측 - Linear Models */
+#dashboard-6 .cards.second .card.four .item div:nth-child(12) {
+  position: absolute;
+  top: 105px;
+  left: 440px;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  place-items: center;
+  grid-gap: 1px;
+  background-color: white;
+  font-size: 13px;
+  width: 140px;
+  height: 20px;
+  padding: 5px;
+}
+
+/* 순번 */
+#dashboard-6 .cards.second .card.four .item div:nth-child(13) {
+  position: absolute;
+  top: 155px;
+  left: 460px;
+  z-index: 1;
+  border: 1px solid black;
+  border-radius: 4px 4px 4px 4px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  place-items: center;
+  background-color: white;
+  font-size: 11px;
+  width: 100px;
+  height: 50px;
+  padding: 5px;
+}
+
+#dashboard-6 .cards.second .card.four .item div:nth-child(13)::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 5px;
+  height: 17px;
+  top: -18px;
+  left: 45px;
+}
+
+/* 다변수 예측 - Linear Models */
+#dashboard-6 .cards.second .card.four .item div:nth-child(14) {
+  position: absolute;
+  top: 105px;
+  left: 550px;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  place-items: center;
+  grid-gap: 1px;
+  background-color: white;
+  font-size: 13px;
+  width: 240px;
+  height: 20px;
+  padding: 5px;
+}
+
+/* 순번 */
+#dashboard-6 .cards.second .card.four .item div:nth-child(15) {
+  position: absolute;
+  top: 155px;
+  left: 570px;
+  z-index: 1;
+  border: 1px solid black;
+  border-radius: 4px 4px 4px 4px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  /* grid-gap: 1px; */
+  background-color: white;
+  font-size: 11px;
+  width: 200px;
+  height: 50px;
+  padding: 5px;
+}
+
+#dashboard-6 .cards.second .card.four .item div:nth-child(15)::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  width: 5px;
+  height: 17px;
+  top: -18px;
+  left: 105px;
+}
+
+/* ******************************************************************************************** 
+
+      .cards.third
+
+******************************************************************************************** */
+#dashboard-6 .cards.third .card.seven .item {
+  height: 200px;
+}
+
+#dashboard-6 .cards.third .card.one {
+  border-top: none;
+  top: -2px;
+}
+
+#dashboard-6 .cards.third .card.four,
+#dashboard-6 .cards.third .card.five,
+#dashboard-6 .cards.third .card.six,
+#dashboard-6 .cards.third .card.seven {
+  border-top: none;
+}
+
+/* ******************************************************************************************** 
+
+      .cards.fourth
+
+******************************************************************************************** */
+#dashboard-6 .cards.fourth .card .item {
+  width: 90px;
+  height: 110px;
+}
+
+#dashboard-6 .cards.fourth .card .item {
+  width: 90px;
+  height: 110px;
+}
+
+#dashboard-6 .cards.fourth .card .item .title {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  top: -65px;
+  left: -75px;
+}
+
+/* 순번 : fifth 공통 */
+#dashboard-6 .cards.fourth .card .item .no {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-turquoise);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+/* 타이틀 : 성능 분석 */
+#dashboard-6 .cards.fourth .card.one .item .title:nth-child(1) {
+  top: 45px;
+  left: -25px;
+}
+
+/* 성능 분석 - 번호 */
+#dashboard-6 .cards.fourth .card.one .item .no:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  top: 40px;
+  left: 0px;
+  border: 10px solid #380089;
+  background: white;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* 제목 : 시계열 예측 분석(수치메트릭) */
+#dashboard-6 .cards.fourth .card.one .item .title:nth-child(3) {
+  top: 5px;
+  left: 90px;
+}
+
+/* 번호 : 시계열 예측 분석(수치메트릭) */
+#dashboard-6 .cards.fourth .card.one .item .no:nth-child(4) {
+  top: 35px;
+  left: 165px;
+}
+
+/* 제목 : 시계열 예측 분석(차트) */
+#dashboard-6 .cards.fourth .card.one .item .title:nth-child(5) {
+  top: 115px;
+  left: 90px;
+}
+
+/* 번호 : 시계열 예측 분석(차트) */
+#dashboard-6 .cards.fourth .card.one .item .no:nth-child(6) {
+  top: 145px;
+  left: 165px;
+}
+
+/* 수치 메트릭 */
+#dashboard-6 .cards.fourth .card.one .item div:nth-child(7) {
+  position: absolute;
+  border: 5px solid #380089;
+  width: 580%;
+  height: 100px;
+  left: 238px;
+  top: 15px;
+  border-radius: 10px;
+  line-height: 100px;
+}
+
+/* 차트 */
+#dashboard-6 .cards.fourth .card.one .item div:nth-child(8) {
+  position: absolute;
+  border: 5px solid #380089;
+  width: 580%;
+  height: 100px;
+  left: 238px;
+  top: 120px;
+  border-radius: 10px;
+  line-height: 100px;
+}
+
+/*
+  설 명 : 메뉴 번호의 폰트를 변경한다.
+*/
+#dashboard-6 .cards .card .item .no {
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: none;
+  color: #4d4d4d;
+  background: rgba(1, 3, 3, 0.075);
+}
+
+/* ******************************************************************************************** 
+
+      line
+
+******************************************************************************************** */
+#dashboard-6 .cards.first .card {
+  border-top: 5px solid var(--color-wine);
+}
+
+#dashboard-6 .cards.first .card.four,
+#dashboard-6 .cards.first .card.five,
+#dashboard-6 .cards.first .card.six {
+  border-bottom: 5px solid var(--color-wine);
+}
+
+#dashboard-6 .cards.first .card.seven {
+  border-right: 5px solid var(--color-wine);
+  border-bottom: 5px solid var(--color-wine);
+  border-radius: 0 50% 50% 0;
+}
+
+#dashboard-6 .cards.second .card {
+  border-top: 5px solid var(--color-wine);
+  top: -5px;
+}
+
+#dashboard-6 .cards.second .card.one {
+  border-left: 5px solid var(--color-wine);
+  border-bottom: 5px solid var(--color-purple);
+  border-radius: 50% 0 0 50%;
+}
+
+#dashboard-6 .cards.second .card.four {
+  border-top: none;
+}
+
+/* 시계열 예측 : 가장 큰 네모 상자 */
+#dashboard-6 .cards.second .card.four .item {
+  border: 5px solid var(--color-skyblue);
+  border-radius: 50px 80px 0 50px;
+  position: absolute;
+  top: 75px;
+}
+
+#dashboard-6 .cards.third .card.seven {
+  border-right: 5px solid var(--color-skyblue);
+  border-bottom: 5px solid var(--color-skyblue);
+  border-radius: 0 0 50% 0;
+}
+
+#dashboard-6 .cards.fourth .card {
+  border-top: 5px solid var(--color-skyblue);
+  top: -15px;
+}
+
+#dashboard-6 .cards.fourth .card.seven {
+  border-top: none;
+}
+
+#dashboard-6 .cards.fourth .card.one {
+  border-left: 5px solid var(--color-skyblue);
+  border-bottom: 5px solid #380089;
+  border-radius: 50% 0 0 50%;
+}
+
+/* 순번 : 성능 분석 - before */
+#dashboard-6 .cards.fourth .card.one .item .no:nth-child(2)::before {
+  content: "시계열 예측 분석";
+  background-color: transparent;
+  font-size: var(--font-small);
+  font-weight: 400;
+  position: absolute;
+  width: 125px;
+  height: 115px;
+  top: 130px;
+  left: 0px;
+}
+
+/* 성능 분석(번호) - after */
+#dashboard-6 .cards.fourth .card.one .item .no:nth-child(2)::after {
+  content: "";
+  background-color: var(--color-white);
+  position: absolute;
+  width: 200px;
+  height: 15px;
+  top: 50px;
+  left: 140px;
+}
+
+/* 시계열 예측 분석(수치메트릭)(번호) - before */
+#dashboard-6 .cards.fourth .card.one .item .no:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -28px;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: 5px solid #380089;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 100% 0 0 0;
+}
+
+/* 시계열 예측 분석(수치메트릭)(번호) - after */
+#dashboard-6 .cards.fourth .card.one .item .no:nth-child(4)::after {
+  content: "";
+  background-color: #380089;
+  position: absolute;
+  top: 25px;
+  left: 49px;
+  width: 25px;
+  height: 5px;
+}
+
+/* 시계열 예측 분석(차트)(번호) - before */
+#dashboard-6 .cards.fourth .card.one .item .no:nth-child(6)::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -28px;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: 5px solid #380089;
+  border-top: none;
+  border-right: none;
+  border-radius: 0 0 0 100%;
+}
+
+/* 시계열 예측 분석(차트)(번호) - after */
+#dashboard-6 .cards.fourth .card.one .item .no:nth-child(6)::after {
+  content: "";
+  background-color: #380089;
+  position: absolute;
+  top: 25px;
+  left: 49px;
+  width: 25px;
+  height: 5px;
+}
+/*# sourceMappingURL=Dashboard-6.css.map */
